@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>CACULATOR</th>
+        </tr>
+        <tr>
+            <td colspan="2"><input type="number" name="number" id="number1"></td>
+            <td colspan="2"> <input type="number" name="number" id="number2"></td>
+        </tr>
+        <tr>
+            <td><button type="button" onclick="ketqua()" id="add"> addition(+)</button></td>
+            <td><button type="button" onclick="ketqua()" id="sub">  subtraction(-)</button></td>
+            <td><button type="button" onclick="ketqua()" id="multi"> multiplication(x)</button></td>
+            <td><button type="button" onclick="ketqua()" id="div"> division(/)</button></td>
+        </tr>
+        <tr></tr>
+        <tr>
+            <td colspan="4"> result :</td>
+            <td id="result"></td>
+        </tr>
+    </table>
+    <script>
+        function ketqua() {
+            let 
+            let number1 = document.getElementById('number1').value
+            let number2 = document.getElementById('number2').value
+            if (ketqua =='add'){
+                let ketqua = number1 + number2
+                document.getElementById('result').innerHTML = ketqua
+            }
+            if (ketqua =='sub'){
+                let ketqua = number1 - number2
+                document.getElementById('result').innerHTML = ketqua
+            }
+            if (ketqua =='multi'){
+                let ketqua = number1*number2
+                document.getElementById('result').innerHTML = ketqua
+                if (ketqua =='div'){
+                    let ketqua = number1/number2
+                    document.getElementById('result').innerHTML = ketqua
+                }
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>
+                <td> Amount</td>
+                <td></td>
+                <td>from currency</td>
+                <td></td>
+                <td>to currency</td>
+            </th>
+        </tr>
+        <tr>
+            <td> <input type="number" name="sotien" id="sotien"></td>
+            <td></td>
+            <td>
+                <label for="card"></label>
+                <select id="card1">
+                <option value="vnd"> vnd </option>
+                <option value="usd"> usd </option>
+                </select>
+            </td>
+            <td></td>
+            <td>
+                <label for="card">
+                    <select id="card2">
+                        <option value="vnd"> vnd </option>
+                        <option value="usd"> usd </option> 
+                    </select>
+                </label>
+            </td>
+            <td></td>
+            <td><button type="button" onclick="doitien()"> convert </button></td>
+        </tr>
+        <tr>
+            <td>result</td>
+            <td id="result"></td>
+        </tr>
+    </table>
+    <script>
+     function doitien(){
+         let sotien = document.getElementById('sotien').value
+         let sotienn = parseFloat(sotien)
+         let card1 = document.getElementById('card1').value
+        let card2 = document.getElementById('card2').value
+        if (card1 == 'vnd' && card2 =='usd' ) {
+            let tiendoi = sotien/24000
+            document.getElementById('result').innerHTML = tiendoi
+        }
+        if (card1 == 'vnd' && card2 == 'vnd'){
+            let tiendoi = sotien
+            document.getElementById('result').innerHTML = tiendoi
+        }
+        if (card1 =='usd' && card2 =='vnd'){
+            let tiendoi = sotien *24000
+            document.getElementById('result').innerHTML = tiendoi
+        }
+        if( card1 == 'usd' && card2 == 'usd'){
+            let tiendoi = sotien 
+            document.getElementById('result').innerHTML = tiendoi
+        }
+             }
+
+    </script>
+</body>
+</html>
